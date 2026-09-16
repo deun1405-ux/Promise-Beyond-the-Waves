@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹이벤트</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Pretendard', sans-serif; }
+    
+    body {
+      display: flex; justify-content: center; align-items: center;
+      min-height: 100vh; background-color: #0f0f1a; color: #fff; overflow: hidden;
+    }
+    
+    /* 게임 화면 프레임 */
+    .game-container {
+      width: 100%; max-width: 480px; height: 100vh; max-height: 850px;
+      position: relative; background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+      border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; padding: 30px;
+    }
+
+    .title-badge {
+      padding: 6px 16px; background: rgba(255, 255, 255, 0.2); border-radius: 20px;
+      font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase;
+    }
+    
+    .main-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 15px; line-height: 1.3; }
+    .sub-title { font-size: 1rem; color: #e0e0e0; margin-bottom: 40px; }
+    
+    .start-btn {
+      padding: 16px 45px; font-size: 1.15rem; font-weight: bold; color: #1a1a2e;
+      background: #ffd166; border: none; border-radius: 35px; cursor: pointer;
+      box-shadow: 0 8px 20px rgba(255, 209, 102, 0.4); transition: all 0.2s;
+    }
+    .start-btn:hover { transform: translateY(-3px) scale(1.03); background: #fff; }
+  </style>
+</head>
+<body>
+
+  <div class="game-container">
+    <div class="title-badge">SPECIAL EVENT</div>
+    <!-- 메인 타이틀 제목 -->
+    <h1 class="main-title">이벤트 제목</h1>
+    <!-- 서브 설명글 -->
+    <p class="sub-title">시작하려면 아래 버튼을 누르세요</p>
+    <!-- 시작 버튼 -->
+    <button class="start-btn" onclick="alert('시작 버튼 클릭!')">START</button>
+  </div>
+
+</body>
+</html>
